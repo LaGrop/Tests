@@ -1,5 +1,11 @@
 # README
 
+# Install
+- Sublime
+- Python 2 & 3
+- pip
+- git
+
 https://github.com/LaGrop/Tests
 
 

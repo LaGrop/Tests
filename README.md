@@ -1,5 +1,8 @@
 # README
 
+# Checkout
+https://www.youtube.com/watch?v=oHmPrjSzmwU
+
 # Install
 - Sublime
 - Python 2 & 3

@@ -10,10 +10,10 @@ https://github.com/LaGrop/Tests
 - Predawn
 - Material theme
 
-## Syncing with Git
+## Syncing Sublime settings with Git
 https://packagecontrol.io/docs/syncing
 
-## Sublime & Python
+## Sublime setup for Python
 Corey Schafer
 https://www.youtube.com/watch?v=xFciV6Ew5r4
 Settings;

@@ -8,6 +8,7 @@ https://www.youtube.com/watch?v=oHmPrjSzmwU
 - Python 2 & 3
 - pip
 - git
+- Notepad++
 
 https://github.com/LaGrop/Tests
 

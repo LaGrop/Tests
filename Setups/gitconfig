@@ -1,0 +1,52 @@
+[core]
+	editor = \"C:/Program Files/Notepad++/notepad++.exe\"
+[gui]
+[gui]
+[user]
+    name = Johan Mannerskog
+    email = johan.mannerskog.external@veoneer.com
+[core]
+    autocrlf = false
+[color]
+    ui = true
+[remote "origin"]
+    fetch = +refs/notes/*:refs/notes/*
+[notes]
+    displayRef = refs/notes/*
+[log]
+    decorate = short
+[diff]
+    guitool = KDiff
+    tool = KDiff
+[difftool]
+    prompt = false
+[difftool "KDiff"]
+    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = KDiff
+[mergetool]
+    trustExitCode = false
+[mergetool "KDiff"]
+    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\"  \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[remote "origin"]
+    fetch = +refs/notes/*:refs/notes/*
+[notes]
+    displayRef = refs/notes/*
+[alias]
+    sh = show
+    st = status
+    sst = submodule foreach \"git status\"
+    rb = rebase
+    mg = merge
+    mt = mergetool
+    ci = commit --verbose
+    co = checkout
+    br = branch
+    di = diff
+    dt = difftool
+    cp = cherry-pick
+    lol = log --graph --branches --remotes --pretty=oneline --abbrev-commit
+    lsh = log --graph --branches --remotes --pretty=short --abbrev-commit
+    
+[gui]
+	recentrepo = C:/Users/johan.mannerskog.CORP/Git/DAG_MPC_MCU

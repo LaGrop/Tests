@@ -1,0 +1,2 @@
+	alias python='winpty python.exe'
+	alias subl='/c/Program\ Files\ \(x86\)/Sublime\ Text\ 3/sublime_text.exe'

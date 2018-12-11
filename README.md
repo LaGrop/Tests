@@ -4,10 +4,12 @@
 https://www.youtube.com/watch?v=oHmPrjSzmwU
 
 # Install
+- Git: https://git-scm.com/downloads
 - Sublime
-- Python 2 & 3
+- Python 2 (& 3)
+	- see bashrc for alias !!
 - pip
-- git
+- Notepad++
 
 https://github.com/LaGrop/Tests
 
@@ -33,4 +35,6 @@ https://github.com/CoreyMSchafer/dotfiles/tree/master/init
 
 ## Python tutorial
 Corey Schafer
+https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7
+
 https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7

@@ -10,7 +10,6 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 WiFiClient client;
 
-// replace with your channel’s thingspeak API key,
 String apiKey = "0RMJNEQESM5ZZ690";
 const char* ssid = "whynot_dd_wrt";
 const char* password =  "##whynot##whynet##";
@@ -23,19 +22,21 @@ void setup() {
   WiFi.begin(ssid, password);
   
   Serial.println();
-  Serial.println();
-  Serial.print("Connecting with ");
-  Serial.println(ssid);
+  Serial.println("Connecting...");
   
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(100);
     Serial.print(".");
   }
   
   Serial.println("");
   Serial.println("WiFi Connected");
+  Serial.print("SSID: ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
 }
 
 void loop() {
@@ -66,5 +67,5 @@ void loop() {
   }
   client.stop();
   
-  delay(300000); // 17sec delay between updates
+  delay(900000); // 900 s = 15 min delay between updates
 }

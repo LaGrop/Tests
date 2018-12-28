@@ -3,7 +3,6 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define myPeriodic 15 // Seconds
 #define ONE_WIRE_BUS 2 // DS18B20 on arduino pin2 corresponds to D4 on physical board
 
 OneWire oneWire(ONE_WIRE_BUS);
@@ -27,7 +26,7 @@ void setup() {
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(100);
+    delay(500);
     Serial.print(".");
   }
   

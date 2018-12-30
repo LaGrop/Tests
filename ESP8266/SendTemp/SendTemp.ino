@@ -15,22 +15,28 @@ const char* password =  "##whynot##whynet##";
 const char* server = "api.thingspeak.com";
 
 void setup() {
+  int retries=5;
+  
   Serial.begin(115200);
   delay(10);
   
   WiFi.begin(ssid, password);
   
   Serial.println();
-  Serial.println("Connecting...");
+  Serial.println("Connecting");
   
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
+    retries--;
+    if (retries==0)
+    {
+      Serial.println("Connect failed!. Going to deep sleep.");
+      ESP.deepSleep(60e6);
+    }
+    delay(1000);
   }
   
-  Serial.println("");
   Serial.println("WiFi Connected");
   Serial.print("SSID: ");
   Serial.println(ssid);
@@ -65,6 +71,8 @@ void loop() {
     Serial.println(temp);
   }
   client.stop();
-  
-  delay(900000); // 900 s = 15 min delay between updates
+
+  Serial.println("Going to deep sleep.");
+  ESP.deepSleep(60e6);
+  //delay(900000); // 900 s = 15 min delay between updates
 }

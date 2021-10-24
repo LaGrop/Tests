@@ -1,3 +1,5 @@
+#include <dummy.h>
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <OneWire.h>
@@ -12,12 +14,12 @@ WiFiClient client;
 #define DEEP_SLEEP 120e6
 
 String apiKey = "0RMJNEQESM5ZZ690";
-const char* ssid = "whynot_dd_wrt";
-const char* password =  "##whynot##whynet##";
+const char* ssid = "Altitude110m";
+const char* password =  "topfloor@110m";
 const char* server = "api.thingspeak.com";
 
 void setup() {
-  int retries=5;
+  int retries=10;
   
   Serial.begin(115200);
   delay(10);
@@ -54,8 +56,9 @@ void loop() {
   
   temp1 = DS18B20.getTempCByIndex(0);
   temp2 = DS18B20.getTempCByIndex(1);
+
     
-  if (client.connect(server,80)) {
+  if ((temp1 < 50) && (temp2 < 50) && client.connect(server,80)) {
     String postStr = apiKey;
     postStr +="&field1=";
     postStr += String(temp1);

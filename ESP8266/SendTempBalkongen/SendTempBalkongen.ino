@@ -58,7 +58,6 @@ void loop() {
   temp1 = DS18B20.getTempCByIndex(0);
   // temp2 = DS18B20.getTempCByIndex(1);
 
-    
   if ((temp1 < 55) && (temp2 < 55) && client.connect(server,80)) {
     String postStr = apiKey;
     // postStr +="&field1=";

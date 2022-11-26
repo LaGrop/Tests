@@ -14,7 +14,7 @@ WiFiClient client;
 #define DEEP_SLEEP 120e6
 //#define DEEP_SLEEP 5e6
 
-String apiKey = "0RMJNEQESM5ZZ690";
+String apiKey = "BMIHVI07ZPPI0ACC";
 const char* ssid = "Altitude110m";
 const char* password =  "topfloor@110m";
 const char* server = "api.thingspeak.com";
@@ -51,7 +51,7 @@ void setup() {
 
 void loop() {
   float temp1;
-  float temp2;
+  float temp2=0;
   
   DS18B20.requestTemperatures();
   
@@ -64,9 +64,9 @@ void loop() {
     // postStr += String(temp1);
     // postStr +="&field2=";
     // postStr += String(temp2);
-    postStr +="&field3=";
+    postStr +="&field1=";
     postStr += String(temp1);
-    postStr += "\r\n\r\n";
+    //postStr += "\r\n\r\n";
     
     client.print("POST /update HTTP/1.1\n");
     client.print("Host: api.thingspeak.com\n");
